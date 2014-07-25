@@ -32,3 +32,19 @@ Running with debug off (production):
 
     export DEBUG=off
     export ALLOWED_HOSTS=localhost,example.com
+
+
+Creating a reusable template off of this single file Django app is easy too. Keep in mind of the
+context variables used when a Django project is created from a template:
+
+* `project_name`
+* `project_directory`
+* `secret_key`
+* `docs_version`
+
+With that I've created a `litestart` template from this:
+
+    django-admin.py startproject peanut_butter --template=litestart
+
+This will create a project named `peanut_butter`.
+
