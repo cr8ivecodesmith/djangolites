@@ -2,6 +2,7 @@ import sys
 
 from django.conf import settings
 from django.core.management import execute_from_command_line
+from django.core.wsgi import get_wsgi_application
 from django.conf.urls import url
 from django.http import HttpResponse
 
@@ -12,6 +13,7 @@ settings.configure(
     SECRET_KEY='supersecretkeykeepitsafe',
     ROOT_URLCONF=__name__,
 )
+application = get_wsgi_application()
 ##### END SETTINGS
 
 
