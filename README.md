@@ -26,3 +26,9 @@ Running for development:
 Running through gunicorn:
 
     gunicorn hello --bind=192.168.56.32:8000 --log-file=-
+
+
+Running with debug off (production):
+
+    export DEBUG=off
+    export ALLOWED_HOSTS=localhost,example.com
